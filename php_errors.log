@@ -1,8 +1,0 @@
-[08-Jun-2016 21:01:45 UTC] PHP Fatal error:  Class 'TestCase' not found in /Users/terdelyi/Sites/Packages/terdelyi/laravel-localedate/tests/LocaleDateTest.php on line 4
-[08-Jun-2016 21:02:06 UTC] PHP Fatal error:  Class 'TestCase' not found in /Users/terdelyi/Sites/Packages/terdelyi/laravel-localedate/tests/LocaleDateTest.php on line 4
-[08-Jun-2016 21:02:42 UTC] PHP Fatal error:  Class 'PHPUnit\Framework\TestCase' not found in /Users/terdelyi/Sites/Packages/terdelyi/laravel-localedate/tests/LocaleDateTest.php on line 6
-[08-Jun-2016 21:08:25 UTC] PHP Fatal error:  Class 'TestCase' not found in /Users/terdelyi/Sites/Packages/terdelyi/laravel-localedate/tests/LocaleDateTest.php on line 4
-[08-Jun-2016 21:10:12 UTC] PHP Fatal error:  Class 'PHPUnit\Framework\TestCase' not found in /Users/terdelyi/Sites/Packages/terdelyi/laravel-localedate/tests/LocaleDateTest.php on line 6
-[08-Jun-2016 21:23:40 UTC] PHP Fatal error:  Class 'Terdelyi\LocaleDate\TestCase' not found in /Users/terdelyi/Sites/Packages/terdelyi/laravel-localedate/tests/LocaleDateTest.php on line 11
-[08-Jun-2016 21:23:52 UTC] PHP Fatal error:  Class 'TestCase' not found in /Users/terdelyi/Sites/Packages/terdelyi/laravel-localedate/tests/LocaleDateTest.php on line 11
-[08-Jun-2016 21:24:07 UTC] PHP Fatal error:  Class 'PHPUnit\Framework\TestCase' not found in /Users/terdelyi/Sites/Packages/terdelyi/laravel-localedate/tests/LocaleDateTest.php on line 11
