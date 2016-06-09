@@ -1,0 +1,20 @@
+{
+    "name": "terdelyi/laravel-localedate",
+    "description": "Simple date localization for Laravel by the locale config value",
+    "keywords": ["laravel", "date", "localization"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tamás Erdélyi",
+            "email": "terdelyi@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Terdelyi\\LocaleDate\\": "src"
+        }
+    }
+}
