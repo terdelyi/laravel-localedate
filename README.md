@@ -23,6 +23,6 @@ Because different systems have different naming schemes for locales date formati
 php artisan vendor:publish --provider="Terdelyi\LocaleDate\LocaleDateServiceProvider"`
 ```
 
-Setup the correct locale value in `config/app.php` and check you have a valid reference to the key in `locales.php`. If everything goes well you get localized dates with `Carbon::now()->diffForHumans()` and `Carbon::now()->addYear()->formatLocalized()`.
+Setup the correct locale value in `config/app.php` and check you have a valid reference to the key in `locales.php`. If everything goes well you get localized dates with `Carbon::now()->addYear()->diffForHumans()` and `Carbon::now()->formatLocalized()`.
 
 You can also change locale with `App::setlocale()`, because package also watches the event what is fired with the method.
