@@ -1,6 +1,6 @@
 <?php
 
-namespace Terdelyi\Localedate;
+namespace Terdelyi\LocaleDate;
 
 use Carbon\Carbon;
 use Mockery;

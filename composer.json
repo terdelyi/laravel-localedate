@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Terdelyi\\LocaleDate\\": "src"
+            "Terdelyi\\LocaleDate\\": "src/"
         }
     }
 }

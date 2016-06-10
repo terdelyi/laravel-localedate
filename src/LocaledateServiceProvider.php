@@ -1,10 +1,10 @@
 <?php
 
-namespace Terdelyi\Localedate;
+namespace Terdelyi\LocaleDate;
 
 use Illuminate\Support\ServiceProvider;
 
-class LocaledateServiceProvider extends ServiceProvider
+class LocaleDateServiceProvider extends ServiceProvider
 {
     protected $locale;
 
@@ -30,7 +30,7 @@ class LocaledateServiceProvider extends ServiceProvider
         // publish config file
         $this->publishes([
             __DIR__.'/config/locales.php' => config_path('locales.php'),
-        ]);
+        ], 'config');
     }
 
     /**

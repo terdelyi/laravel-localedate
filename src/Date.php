@@ -1,13 +1,17 @@
 <?php
 
-namespace Terdelyi\Localedate;
+namespace Terdelyi\LocaleDate;
 
 use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;
 
 class Date
 {
-    protected $locales = array();
+    /**
+     * Loaded locales
+     * @var array
+     */
+    protected $locales = [];
 
     /**
      * Contructor

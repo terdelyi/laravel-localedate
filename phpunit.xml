@@ -9,7 +9,7 @@
          stopOnFailure="false"
          syntaxCheck="false">
     <testsuites>
-        <testsuite name="Localedate Test Suite">
+        <testsuite name="LocaleDate Test Suite">
             <directory suffix=".php">./tests/</directory>
         </testsuite>
     </testsuites>
