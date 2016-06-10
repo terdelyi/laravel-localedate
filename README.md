@@ -18,11 +18,11 @@ After `composer update` add `Terdelyi\LocaleDate\LocaleDateServiceProvider::clas
 
 ## Using
 
-Because different systems have different naming schemes for locales date formating uses a `locales.php` config file. You can easily publish it to your application to modify it:
+Because different systems have different naming schemes for locales, date formatting uses a `locales.php` config file. You can easily publish it to your application to modify it:
 ```bash
 php artisan vendor:publish --provider="Terdelyi\LocaleDate\LocaleDateServiceProvider"`
 ```
 
-Setup the correct locale value in `config/app.php` and check you have a valid reference to the key in `locales.php`. If everything goes well you get localized dates with `Carbon::now()->addYear()->diffForHumans()` and `Carbon::now()->formatLocalized()`.
+Set up the correct locale value in `config/app.php` and check that you have a valid reference to the key in `locales.php`. If everything goes well you get localized dates with `Carbon::now()->addYear()->diffForHumans()` and `Carbon::now()->formatLocalized()`.
 
 You can also change locale with `App::setlocale()`, because package also watches the event what is fired with the method.
