@@ -25,7 +25,9 @@ class DateTest extends \PHPUnit_Framework_TestCase
     {
         $this->app = Mockery::mock(Application::class);
         $this->date = new Date($this->app, new Carbon);
-        $this->date->loadLocales(['hu' => 'hu_HU']);
+
+        $locale = getenv('LOCALEDATE_LANG') ?: 'hu_HU';
+        $this->date->loadLocales(['hu' => $locale]);
         $this->date->setLocale('hu');
         $this->date->setCarbon('hu');
 
@@ -37,8 +39,8 @@ class DateTest extends \PHPUnit_Framework_TestCase
      */
     public function testFormatLocalizedIsEqual()
     {
-        $this->assertEquals('Csütörtök', Carbon::createFromDate(2016,6,9)->formatLocalized('%A'));
-        $this->assertEquals('Május', Carbon::createFromTimestamp(1493629070)->formatLocalized('%B'));
+        $this->assertEquals('csütörtök', strtolower(Carbon::createFromDate(2016,6,9)->formatLocalized('%A')));
+        $this->assertEquals('május', strtolower(Carbon::createFromTimestamp(1493629070)->formatLocalized('%B')));
     }
 
     /**
