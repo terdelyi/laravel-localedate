@@ -2,7 +2,7 @@
 
 return [
 
-    // it's only an example, extend or modify if it's necessary
+    // It's only an example, modify it for your needs
     'hu' => 'hu_HU.UTF-8',
     'en' => 'en_GB.UTF-8',
     'de' => 'de_DE.UTF-8',

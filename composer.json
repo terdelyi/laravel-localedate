@@ -1,6 +1,6 @@
 {
     "name": "terdelyi/laravel-localedate",
-    "description": "Simple date localization for Laravel by the locale config value",
+    "description": "Simple date localization for Laravel.",
     "keywords": ["laravel", "date", "localization"],
     "license": "MIT",
     "authors": [
@@ -10,7 +10,14 @@
         }
     ],
     "require": {
-        "php": ">=5.6"
+        "php": ">=5.6",
+        "illuminate/contracts": "5.*",
+        "illuminate/support": "5.*",
+        "nesbot/carbon": "~1.20"
+    },
+    "require-dev": {
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~5.7"
     },
     "autoload": {
         "psr-4": {

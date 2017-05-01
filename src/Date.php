@@ -17,9 +17,9 @@ class Date
      * Contructor
      * @param Application $app [description]
      */
-    public function __construct(Application $app)
+    public function __construct(Application $app, Carbon $carbon)
     {
-        $this->carbon = new Carbon;
+        $this->carbon = $carbon;
         $this->app = $app;
     }
 

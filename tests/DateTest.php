@@ -3,8 +3,8 @@
 namespace Terdelyi\LocaleDate;
 
 use Carbon\Carbon;
-use Mockery;
 use Illuminate\Contracts\Foundation\Application;
+use Mockery;
 
 class DateTest extends \PHPUnit_Framework_TestCase
 {
@@ -14,45 +14,34 @@ class DateTest extends \PHPUnit_Framework_TestCase
     protected $app;
 
     /**
-     * Setup test
+     * Setup testcase.
      */
     protected function setUp()
     {
-        $this->setUpMocks();
-
-        $this->date = new Date($this->app);
+        $this->app = Mockery::mock(Application::class);
+        $this->date = new Date($this->app, new Carbon);
         $this->date->loadLocales(['hu' => 'hu_HU']);
+        $this->date->setLocale('hu');
+        $this->date->setCarbon('hu');
 
         parent::setUp();
     }
 
     /**
-     * Setup mocks
-     */
-    protected function setUpMocks()
-    {
-        $this->app = Mockery::mock(Application::class);
-    }
-
-    /**
-     * Test formatLocalized()
-     * @return [type] [description]
+     * Testing formatLocalized function.
      */
     public function testFormatLocalizedIsEqual()
     {
-        $this->date->setLocale('hu');
-        $formattedDate = Carbon::createFromDate(2016,6,9)->formatLocalized('%A %d %B %Y');
-        $this->assertEquals(strtolower($formattedDate), strtolower('Csütörtök 09 Június 2016'));
+        $this->assertEquals('Csütörtök', Carbon::createFromDate(2016,6,9)->formatLocalized('%A'));
+        $this->assertEquals('Május', Carbon::createFromTimestamp(1493629070)->formatLocalized('%B'));
     }
 
     /**
-     * Test diffForHumans()
-     * @return [type] [description]
+     * Test diffForHumans function.
      */
-    public function testdiffForHumansIsEqual()
+    public function testDiffForHumansIsEqual()
     {
-        $this->date->setCarbon('hu');
-        $formattedDate = Carbon::createFromDate(2016,6,9)->addYear()->diffForHumans();
-        $this->assertEquals(strtolower($formattedDate), strtolower('1 évvel később'));
+        $this->assertEquals('1 évvel később', Carbon::now()->diffForHumans(Carbon::now()->subYear()));
+        $this->assertEquals('5 napja', Carbon::now()->subDays(5)->diffForHumans());
     }
 }
