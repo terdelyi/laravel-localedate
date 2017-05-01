@@ -39,8 +39,8 @@ class DateTest extends \PHPUnit_Framework_TestCase
      */
     public function testFormatLocalizedIsEqual()
     {
-        $this->assertEquals('csütörtök', strtolower(Carbon::createFromDate(2016,6,9)->formatLocalized('%A')));
-        $this->assertEquals('május', strtolower(Carbon::createFromTimestamp(1493629070)->formatLocalized('%B')));
+        $this->assertEquals('csütörtök', mb_strtolower(Carbon::createFromDate(2016,6,9)->formatLocalized('%A')));
+        $this->assertEquals('május', mb_strtolower(Carbon::createFromTimestamp(1493629070)->formatLocalized('%B')));
     }
 
     /**
