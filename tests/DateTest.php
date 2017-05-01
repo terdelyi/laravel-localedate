@@ -9,9 +9,14 @@ use Mockery;
 class DateTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var Mockery\Mock
+     * @var \Mockery\Mock
      */
     protected $app;
+
+    /**
+     * @var \Terdelyi\LocaleDate\Date
+     */
+    protected $date;
 
     /**
      * Setup testcase.
