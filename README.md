@@ -37,7 +37,7 @@ php artisan vendor:publish --provider="Terdelyi\LocaleDate\LocaleDateServiceProv
 Now set up the correct locale value in `config/app.php` and check that you have a valid reference to the key in `locales.php`. If everything goes well you'll get localized dates with
 
 ```
-Carbon::now()->diffForHumans(Carbon::now()->subYear() // this gives back '1 year later'
+Carbon::now()->diffForHumans(Carbon::now()->subYear()) // this gives back '1 year later'
 ```
 
 and
