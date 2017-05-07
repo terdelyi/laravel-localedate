@@ -25,7 +25,7 @@ or add it to your `composer.json` file:
 }
 ```
 
-After `composer update` add `Terdelyi\LocaleDate\LocaleDateServiceProvider::class` to the providers section in `config/app.php`.
+After `composer update` add `Terdelyi\LocaleDate\LocaleDateServiceProvider::class` to the providers array in `config/app.php`.
 
 ### Is there anything more what I should know?
 
@@ -34,24 +34,24 @@ Because different systems (MacOs, Windows, Linux) have different naming schemes 
 php artisan vendor:publish --provider="Terdelyi\LocaleDate\LocaleDateServiceProvider"
 ```
 
-Now set up the correct locale value in `config/app.php` and check that you have a valid reference to the key in `locales.php`. If everything goes well you'll get localized dates with
+Now set up the correct locale value in `config/app.php` and check that you have a valid reference to the key in `locales.php`. If everything goes well you'll get localized dates with:
 
-```
+```php
 Carbon::now()->diffForHumans(Carbon::now()->subYear()) // this gives back '1 year later'
 ```
 
-and
+And so:
 
-```
+```php
 Carbon::createFromDate(2016,6,9)->formatLocalized('%A') // this gives back 'thursday'
 ```
 
 ### Change locale on runtime
 
-If you want to change locale setting on runtime, you can use
+If you want to change locale setting on runtime, you can use:
 
-```
+```php
 App::setlocale()
 ```
 
-because the package is watching the event what is fired with this method and does what is necessary.
+Because the package is watching the event what is fired with this method and does what is necessary.
