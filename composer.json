@@ -23,5 +23,12 @@
         "psr-4": {
             "Terdelyi\\LocaleDate\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Terdelyi\\LocaleDate\\LocaleDateServiceProvider"
+            ]
+        }
     }
 }
