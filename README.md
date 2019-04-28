@@ -2,6 +2,9 @@
 
 [![Build Status](https://travis-ci.org/terdelyi/laravel-localedate.svg?branch=master)](https://travis-ci.org/terdelyi/laravel-localedate)
 
+
+> IMPORTANT! From Laravel 5.8 the framework is supporting Carbon 2 by default which has a [better and nicer solution](https://carbon.nesbot.com/docs/#api-localization) for localising dates therefor this package lost its purpose and is no longer supported.
+
 ### What's this?
 Simple date localization for Laravel.
 
