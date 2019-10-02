@@ -48,7 +48,7 @@ class DateTest extends \PHPUnit_Framework_TestCase
      */
     public function testDiffForHumansIsEqual()
     {
-        $this->assertEquals('1 évvel később', Carbon::now()->diffForHumans(Carbon::now()->subYear()));
+        $this->assertEquals('1 évvel később', Carbon::now()->diffForHumans(Carbon::now()->subYear()->subDay()));
         $this->assertEquals('5 napja', Carbon::now()->subDays(5)->diffForHumans());
     }
 }
